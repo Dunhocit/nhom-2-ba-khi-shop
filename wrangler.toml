@@ -1,0 +1,22 @@
+name = "nhom2-ba-khi-fashion"
+main = "src/index.ts"
+compatibility_date = "2025-01-15"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "fashion_db"
+database_id = "115a1bc7-4a78-4a6a-8c95-9f082413ca00"
+migrations_dir = "migrations"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "ad5b878b28a9476fb69643ce59da7ead"
+
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "nhom2-ba-khi-images"

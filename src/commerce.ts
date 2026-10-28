@@ -6,6 +6,14 @@ export type ShopBindings = {
   IMAGES: R2Bucket;
   ASSETS: Fetcher;
   ADMIN_TOKEN: string;
+  AI: {
+    run(model: string, input: Record<string, unknown>): Promise<unknown>;
+  };
+  VECTORIZE: {
+    upsert(vectors: Array<{ id: string; values: number[] }>): Promise<unknown>;
+    query(values: number[], options: { topK: number }): Promise<{ matches: Array<{ id: string; score: number }> }>;
+    deleteByIds(ids: string[]): Promise<unknown>;
+  };
 };
 export const commerce = new Hono<{ Bindings: ShopBindings }>();
 const error = (_c: any, message: string, status = 400) =>

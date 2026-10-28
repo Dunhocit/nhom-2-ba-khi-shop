@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="vi">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <meta content="#11120f" name="theme-color"/>
-  <meta content="Nhóm 2 - Bá Khí — Thời trang cá tính dành cho bạn." name="description"/>
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1" name="viewport" />
+  <meta content="#11120f" name="theme-color" />
+  <meta content="Nhóm 2 - Bá Khí — Thời trang cá tính dành cho bạn." name="description" />
   <title>
-   Nhóm 2 - Bá Khí | Thời trang cá tính
+    Nhóm 2 - Bá Khí | Thời trang cá tính
   </title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
   <style>
     :root {
       --ink: #222720;
@@ -20,35 +23,38 @@
       --muted: #777c72;
       --accent: #394b38;
     }
-    
+
     * {
       box-sizing: border-box;
     }
-    
+
     html {
       scroll-behavior: smooth;
     }
-    
+
     body {
       margin: 0;
       background: var(--cream);
       color: var(--ink);
-      font: 15px 'DM Sans',sans-serif;
+      font: 15px 'DM Sans', sans-serif;
     }
-    
-    button,input,select,textarea {
+
+    button,
+    input,
+    select,
+    textarea {
       font: inherit;
     }
-    
+
     button {
       cursor: pointer;
     }
-    
+
     a {
       text-decoration: none;
       color: inherit;
     }
-    
+
     .announcement {
       background: #28382d;
       color: #e9f0e7;
@@ -57,16 +63,16 @@
       letter-spacing: .09em;
       padding: 11px;
     }
-    
+
     .header {
-      background: rgba(248,247,243,.95);
+      background: rgba(248, 247, 243, .95);
       position: sticky;
       top: 0;
       z-index: 10;
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(10px);
     }
-    
+
     .nav {
       max-width: 1330px;
       margin: auto;
@@ -77,16 +83,16 @@
       padding: 0 28px;
       gap: 25px;
     }
-    
+
     .brand {
       font: 800 29px 'Manrope';
       letter-spacing: -.09em;
     }
-    
+
     .brand span {
       color: #92a585;
     }
-    
+
     .navlinks {
       display: flex;
       gap: 32px;
@@ -94,17 +100,17 @@
       font-weight: 700;
       letter-spacing: .07em;
     }
-    
+
     .navlinks a:hover {
       color: #687e60;
     }
-    
+
     .navright {
       display: flex;
       align-items: center;
       gap: 12px;
     }
-    
+
     .iconbtn {
       border: 0;
       background: none;
@@ -112,7 +118,7 @@
       padding: 8px;
       position: relative;
     }
-    
+
     .count {
       position: absolute;
       right: -3px;
@@ -124,7 +130,7 @@
       min-width: 18px;
       padding: 3px;
     }
-    
+
     .hero {
       max-width: 1440px;
       margin: auto;
@@ -133,15 +139,15 @@
       grid-template-columns: 48% 52%;
       background: #e8eae1;
     }
-    
+
     .hero-copy {
-      padding: 100px clamp(25px,7vw,110px);
+      padding: 100px clamp(25px, 7vw, 110px);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: start;
     }
-    
+
     .eyebrow {
       font-size: 11px;
       letter-spacing: .22em;
@@ -149,20 +155,20 @@
       color: #60755a;
       text-transform: uppercase;
     }
-    
+
     .hero h1 {
-      font: 700 clamp(49px,5.8vw,86px)/1.05 Manrope;
+      font: 700 clamp(49px, 5.8vw, 86px)/1.05 Manrope;
       letter-spacing: -.075em;
       margin: 20px 0;
     }
-    
+
     .hero p {
       font-size: 16px;
       line-height: 1.8;
       color: #687166;
       max-width: 420px;
     }
-    
+
     .primary {
       background: #293b2c;
       color: #fff;
@@ -176,23 +182,23 @@
       justify-content: center;
       gap: 10px;
     }
-    
+
     .primary:hover {
       background: #475b48;
     }
-    
+
     .outline {
       background: transparent;
       border: 1px solid #aaa;
       padding: 15px 21px;
     }
-    
+
     .hero-photo {
       background: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=85') center 40%/cover;
       min-height: 500px;
       position: relative;
     }
-    
+
     .hero-photo:after {
       content: 'NEW SEASON  /  2026';
       position: absolute;
@@ -203,39 +209,39 @@
       font-weight: 700;
       font-size: 12px;
     }
-    
+
     .wrap {
       max-width: 1300px;
       margin: auto;
       padding: 0 28px;
     }
-    
+
     .perks {
       border-bottom: 1px solid var(--line);
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       padding: 28px 0;
       text-align: center;
     }
-    
+
     .perks div {
       font-size: 13px;
       font-weight: 700;
     }
-    
+
     .perks small {
       display: block;
       color: var(--muted);
       font-weight: 400;
       margin-top: 5px;
     }
-    
+
     .section {
       padding-top: 90px;
       padding-bottom: 90px;
     }
-    
+
     .section-heading {
       display: flex;
       justify-content: space-between;
@@ -243,24 +249,24 @@
       gap: 22px;
       margin-bottom: 32px;
     }
-    
+
     .section h2 {
-      font: 800 clamp(27px,3vw,42px) Manrope;
+      font: 800 clamp(27px, 3vw, 42px) Manrope;
       letter-spacing: -.05em;
       margin: 9px 0;
     }
-    
+
     .section-heading p {
       color: var(--muted);
       margin: 0;
     }
-    
+
     .categories {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
     }
-    
+
     .chip {
       border: 1px solid #d2d8cd;
       border-radius: 30px;
@@ -269,13 +275,14 @@
       font-size: 13px;
       font-weight: 700;
     }
-    
-    .chip.active,.chip:hover {
+
+    .chip.active,
+    .chip:hover {
       background: #283b2b;
       color: white;
       border-color: #283b2b;
     }
-    
+
     .search {
       background: #fff;
       border: 1px solid var(--line);
@@ -285,7 +292,7 @@
       max-width: 100%;
       outline-color: #647b62;
     }
-    
+
     .filters {
       display: flex;
       justify-content: space-between;
@@ -293,35 +300,35 @@
       margin: 23px 0 30px;
       flex-wrap: wrap;
     }
-    
+
     .products {
       display: grid;
-      grid-template-columns: repeat(4,minmax(0,1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 28px;
     }
-    
+
     .product {
       min-width: 0;
     }
-    
+
     .photo {
       position: relative;
       aspect-ratio: 3/3.7;
       background: #eaeae5;
       overflow: hidden;
     }
-    
+
     .photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform .5s;
     }
-    
+
     .product:hover .photo img {
       transform: scale(1.045);
     }
-    
+
     .tag {
       position: absolute;
       top: 13px;
@@ -332,13 +339,13 @@
       padding: 8px 10px;
       font-weight: 700;
     }
-    
+
     .quick {
       position: absolute;
       bottom: 14px;
       left: 14px;
       right: 14px;
-      background: rgba(255,255,255,.94);
+      background: rgba(255, 255, 255, .94);
       border: none;
       padding: 12px;
       font-weight: 700;
@@ -346,28 +353,29 @@
       transform: translateY(8px);
       transition: .2s;
     }
-    
-    .product:hover .quick,.quick:focus {
+
+    .product:hover .quick,
+    .quick:focus {
       opacity: 1;
       transform: none;
     }
-    
+
     .product h3 {
       font-size: 14px;
       margin: 16px 0 7px;
     }
-    
+
     .product .sub {
       font-size: 12px;
       color: #888;
       margin-bottom: 9px;
     }
-    
+
     .money {
       font-size: 14px;
       font-weight: 800;
     }
-    
+
     .old {
       text-decoration: line-through;
       color: #a0a19b;
@@ -375,43 +383,43 @@
       margin-left: 8px;
       font-size: 12px;
     }
-    
+
     .banner {
       background: #dbe4d7;
       display: grid;
       grid-template-columns: 1fr 1fr;
       min-height: 350px;
     }
-    
+
     .banner>div:first-child {
-      padding: 65px min(7vw,95px);
+      padding: 65px min(7vw, 95px);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: start;
     }
-    
+
     .banner h2 {
-      font: 800 clamp(27px,4vw,51px)/1.17 Manrope;
+      font: 800 clamp(27px, 4vw, 51px)/1.17 Manrope;
       letter-spacing: -.06em;
       margin: 12px 0;
     }
-    
+
     .banner p {
       line-height: 1.7;
       color: #596b59;
     }
-    
+
     .banner-image {
       background: url('https://images.unsplash.com/photo-1445205170230-053b83016050?w=1000&q=85') center/cover;
     }
-    
+
     .footer {
       background: #253329;
       color: #edf1eb;
       padding: 65px 28px 25px;
     }
-    
+
     .footer-inner {
       max-width: 1300px;
       margin: auto;
@@ -420,17 +428,17 @@
       gap: 35px;
       flex-wrap: wrap;
     }
-    
+
     .footer p {
       color: #b5c3b4;
       max-width: 330px;
       line-height: 1.8;
     }
-    
+
     .footer small {
       color: #b5c3b4;
     }
-    
+
     .overlay {
       position: fixed;
       inset: 0;
@@ -438,11 +446,11 @@
       z-index: 30;
       display: none;
     }
-    
+
     .overlay.open {
       display: block;
     }
-    
+
     .drawer {
       background: #fcfcf9;
       position: fixed;
@@ -458,11 +466,11 @@
       flex-direction: column;
       box-shadow: -5px 0 40px #0002;
     }
-    
+
     .drawer.open {
       transform: none;
     }
-    
+
     .drawer-head {
       display: flex;
       justify-content: space-between;
@@ -470,60 +478,62 @@
       padding: 25px;
       border-bottom: 1px solid var(--line);
     }
-    
+
     .drawer-body {
       padding: 24px;
       overflow: auto;
       flex: 1;
     }
-    
+
     .drawer-bottom {
       padding: 25px;
       border-top: 1px solid var(--line);
       background: white;
     }
-    
+
     .cartrow {
       display: flex;
       gap: 16px;
       padding: 16px 0;
       border-bottom: 1px solid var(--line);
     }
-    
+
     .cartrow img {
       width: 86px;
       height: 105px;
       object-fit: cover;
       background: #eee;
     }
-    
+
     .cartrow h4 {
       margin: 0 0 7px;
     }
-    
+
     .dim {
       color: var(--muted);
       font-size: 13px;
     }
-    
+
     .remove {
       border: 0;
       background: none;
       color: #a54a47;
       padding: 8px 0;
     }
-    
+
     .form {
       display: grid;
       gap: 13px;
     }
-    
+
     .form label {
       font-weight: 700;
       font-size: 12px;
     }
-    
-    .form input,.form textarea,.form select {
+
+    .form input,
+    .form textarea,
+    .form select {
       width: 100%;
       padding: 12px;
       border: 1px solid #d6d9d3;
@@ -531,12 +541,12 @@
       border-radius: 2px;
       margin-top: 5px;
     }
-    
+
     .form textarea {
       resize: vertical;
       min-height: 65px;
     }
-    
+
     .total {
       display: flex;
       justify-content: space-between;
@@ -544,7 +554,7 @@
       font-weight: 800;
       margin: 16px 0;
     }
-    
+
     .modal {
       position: fixed;
       inset: 0;
@@ -554,37 +564,37 @@
       padding: 24px;
       overflow: auto;
     }
-    
+
     .modal.open {
       display: grid;
     }
-    
+
     .modalbox {
-      width: min(850px,100%);
+      width: min(850px, 100%);
       background: #fff;
       position: relative;
       max-height: 94dvh;
       overflow: auto;
     }
-    
+
     .close {
       border: 0;
       background: none;
       font-size: 27px;
     }
-    
+
     .modal .close {
       position: absolute;
       top: 10px;
       right: 15px;
       z-index: 2;
     }
-    
+
     .detail {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
-    
+
     .detail img {
       height: 530px;
       max-height: 70vh;
@@ -592,23 +602,23 @@
       object-fit: cover;
       background: #eee;
     }
-    
+
     .detail-content {
       padding: 50px 37px;
     }
-    
+
     .detail h2 {
       font: 800 32px Manrope;
       letter-spacing: -.05em;
     }
-    
+
     .detail select {
       width: 100%;
       padding: 12px;
       margin: 8px 0 17px;
       border: 1px solid #ddd;
     }
-    
+
     .toast {
       position: fixed;
       bottom: 24px;
@@ -621,185 +631,214 @@
       display: none;
       box-shadow: 0 10px 35px #0002;
     }
-    
+
     .toast.show {
       display: block;
     }
-    
+
     .empty {
       text-align: center;
       padding: 70px 20px;
       color: #777;
     }
-    
+
     .admin {
       max-width: 1180px;
       margin: 50px auto;
       padding: 0 25px;
     }
-    
+
     .admin h1 {
       font: 800 34px Manrope;
     }
-    
+
     .admin-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
     }
-    
+
     .panel {
       background: white;
       padding: 25px;
       border: 1px solid var(--line);
     }
-    
+
     .panel h2 {
       margin: 0 0 20px;
       font-size: 20px;
     }
-    
+
     .admintable {
       width: 100%;
       border-collapse: collapse;
       font-size: 13px;
     }
-    
-    .admintable td,.admintable th {
+
+    .admintable td,
+    .admintable th {
       padding: 12px 8px;
       border-bottom: 1px solid var(--line);
       text-align: left;
     }
-    
+
     .smallbtn {
       border: 1px solid #ddd;
       background: #fff;
       padding: 7px 9px;
       font-size: 12px;
     }
-    
+
     .hidden {
-      display: none!important;
+      display: none !important;
     }
-    
+
     @media(max-width:950px) {
       .hero {
         grid-template-columns: 1fr 1fr;
       }
+
       .hero-copy {
         padding: 55px 32px;
       }
+
       .products {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
+
       .navlinks {
         gap: 15px;
       }
+
       .admin-layout {
         grid-template-columns: 1fr;
       }
     }
-    
+
     @media(max-width:650px) {
       .nav {
         min-height: 67px;
         padding: 0 18px;
       }
+
       .navlinks {
         display: none;
       }
+
       .brand {
         font-size: 25px;
       }
+
       .hero {
         grid-template-columns: 1fr;
       }
+
       .hero-copy {
         padding: 65px 27px;
       }
+
       .hero h1 {
         font-size: 49px;
       }
+
       .hero-photo {
         min-height: 390px;
       }
+
       .perks {
         grid-template-columns: 1fr;
         gap: 18px;
       }
+
       .section {
         padding-top: 60px;
         padding-bottom: 60px;
       }
+
       .products {
-        grid-template-columns: repeat(2,minmax(0,1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
       }
+
       .product h3 {
         font-size: 13px;
       }
+
       .quick {
         opacity: 1;
         transform: none;
         padding: 10px;
       }
+
       .banner {
         grid-template-columns: 1fr;
       }
+
       .banner>div:first-child {
         padding: 55px 25px;
       }
+
       .banner-image {
         min-height: 230px;
       }
+
       .detail {
         grid-template-columns: 1fr;
       }
+
       .detail img {
         height: 300px;
       }
+
       .detail-content {
         padding: 28px;
       }
+
       .section-heading {
         align-items: start;
       }
+
       .search {
         width: 100%;
       }
+
       .filters {
         display: block;
       }
+
       .filters .search {
         margin-top: 15px;
       }
+
       .drawer {
         width: 100%;
       }
     }
-    
-    #commerceModal input,#commerceModal select,#commerceModal textarea {
+
+    #commerceModal input,
+    #commerceModal select,
+    #commerceModal textarea {
       width: 100%;
       padding: 11px;
       margin: 5px 0 14px;
       border: 1px solid #d6d9d3;
       border-radius: 3px;
     }
-    
+
     #commerceModal button.primary {
       margin-top: 7px;
     }
-    
+
     #commerceModal h2 {
       font: 800 25px Manrope;
     }
-    
+
     #commerceModal label {
       display: block;
       font-weight: 700;
       font-size: 13px;
     }
-    
+
     .cRow {
       display: flex;
       gap: 12px;
@@ -808,23 +847,23 @@
       border-bottom: 1px solid #ddd;
       padding: 13px 0;
     }
-    
+
     .cNav {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
-    
+
     .cNav button {
       background: white;
       border: 1px solid #aaa;
       padding: 10px;
     }
-    
+
     .product {
       position: relative;
     }
-    
+
     .fav-toggle {
       position: absolute;
       top: 12px;
@@ -838,437 +877,601 @@
       width: 38px;
       height: 38px;
     }
-    
+
     .review-panel {
       margin: 15px 0;
       padding: 12px;
       background: #f5f6f3;
     }
-    
+
     .overview-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 9px;
       margin: 12px 0;
     }
-    
+
     .overview-grid>div {
       padding: 12px;
       background: #f0f3ee;
     }
-    
+
     .errorHint {
       color: #ae3131;
       font-size: 13px;
     }
+
+    .chat-launcher {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 20;
+      width: 58px;
+      height: 58px;
+      border: 0;
+      border-radius: 50%;
+      background: #293b2c;
+      color: #fff;
+      font-size: 24px;
+      box-shadow: 0 8px 24px #17231840;
+    }
+
+    .chat-panel {
+      position: fixed;
+      right: 24px;
+      bottom: 94px;
+      z-index: 21;
+      width: min(390px, calc(100vw - 32px));
+      height: min(560px, calc(100dvh - 125px));
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 55px #17231830;
+      display: none;
+      flex-direction: column;
+    }
+
+    .chat-panel.open {
+      display: flex;
+    }
+
+    .chat-head {
+      background: #293b2c;
+      color: #fff;
+      padding: 16px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chat-head small {
+      display: block;
+      margin-top: 3px;
+      color: #d3dfd1;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 16px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .chat-message {
+      max-width: 88%;
+      padding: 11px 13px;
+      background: #f0f3ee;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .chat-message.user {
+      align-self: flex-end;
+      background: #293b2c;
+      color: #fff;
+    }
+
+    .chat-message small {
+      display: block;
+      margin-top: 7px;
+      font-size: 11px;
+      opacity: .75;
+    }
+
+    .chat-form {
+      display: flex;
+      padding: 12px;
+      gap: 8px;
+      border-top: 1px solid var(--line);
+    }
+
+    .chat-form input {
+      flex: 1;
+      min-width: 0;
+      border: 1px solid #d6d9d3;
+      padding: 11px;
+    }
+
+    .chat-form button {
+      border: 0;
+      background: #293b2c;
+      color: white;
+      padding: 0 16px;
+    }
+
+    .knowledge-list {
+      margin-top: 16px;
+    }
+
+    .knowledge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border-top: 1px solid var(--line);
+      padding: 12px 0;
+    }
+
+    .knowledge-row strong {
+      display: block;
+      overflow-wrap: anywhere;
+    }
+
+    @media(max-width:650px) {
+      .chat-launcher {
+        right: 16px;
+        bottom: 16px;
+      }
+
+      .chat-panel {
+        right: 16px;
+        bottom: 84px;
+      }
+    }
   </style>
- </head>
- <body>
+</head>
+
+<body>
   <div id="shop">
-   <div class="announcement">
-    MIỄN PHÍ VẬN CHUYỂN CHO ĐƠN TỪ 499.000Đ · THANH TOÁN KHI NHẬN HÀNG
-   </div>
-   <header class="header">
-    <nav class="nav">
-     <a class="brand" href="/">
-      Nhóm 2 - Bá Khí
-      <span>
-       .
-      </span>
-     </a>
-     <div class="navlinks">
-      <a href="#products">
-       SẢN PHẨM
-      </a>
-      <a href="#products" onclick="chooseCategory('Áo')">
-       ÁO
-      </a>
-      <a href="#products" onclick="chooseCategory('Quần')">
-       QUẦN
-      </a>
-      <a href="#story">
-       VỀ CHÚNG TÔI
-      </a>
-     </div>
-     <div class="navright">
-      <button aria-label="Tài khoản" class="iconbtn" onclick="openMember()" title="Tài khoản">
-       ♙
-      </button>
-      <button aria-label="Yêu thích" class="iconbtn" onclick="openFavorites()" title="Yêu thích">
-       ♡
-      </button>
-      <button aria-label="Tra cứu đơn" class="iconbtn" onclick="openTracking()" title="Tra cứu đơn">
-       ▤
-      </button>
-      <button aria-label="Tìm kiếm" class="iconbtn" onclick="document.getElementById('search').focus();document.getElementById('products').scrollIntoView()">
-       ⌕
-      </button>
-      <button aria-label="Giỏ hàng" class="iconbtn" onclick="openCart()">
-       ♧
-       <span class="count" id="cartCount">
-        0
-       </span>
-      </button>
-     </div>
-    </nav>
-   </header>
-   <section class="hero">
-    <div class="hero-copy">
-     <span class="eyebrow">
-      THE NEW COLLECTION · 2026
-     </span>
-     <h1>
-      Wear your
-      <br/>
-      own story.
-     </h1>
-     <p>
-      Đơn giản nhưng không đơn điệu. Khám phá những thiết kế tinh tế, thoải mái để tự tin là chính mình mỗi ngày.
-     </p>
-     <a class="primary" href="#products">
-      KHÁM PHÁ BỘ SƯU TẬP
-      <span>
-       ↗
-      </span>
-     </a>
+    <div class="announcement">
+      MIỄN PHÍ VẬN CHUYỂN CHO ĐƠN TỪ 499.000Đ · THANH TOÁN KHI NHẬN HÀNG
     </div>
-    <div aria-label="Thời trang mùa mới" class="hero-photo" role="img">
-    </div>
-   </section>
-   <div class="wrap">
-    <div class="perks">
-     <div>
-      ◇   CHẤT LƯỢNG CHỌN LỌC
-      <small>
-       Chú trọng chất liệu và đường may
-      </small>
-     </div>
-     <div>
-      ↗   GIAO HÀNG TOÀN QUỐC
-      <small>
-       Đóng gói cẩn thận, giao nhanh
-      </small>
-     </div>
-     <div>
-      ♡   HỖ TRỢ TẬN TÂM
-      <small>
-       Tư vấn lựa chọn sản phẩm
-      </small>
-     </div>
-    </div>
-   </div>
-   <section class="section wrap" id="products">
-    <div class="section-heading">
-     <div>
-      <span class="eyebrow">
-       CURATED FOR YOU
-      </span>
-      <h2>
-       Sản phẩm nổi bật
-      </h2>
-      <p>
-       Chọn phong cách của riêng bạn.
-      </p>
-     </div>
-     <span class="dim" id="productCount">
-     </span>
-    </div>
-    <div class="filters">
-     <div class="categories" id="categories">
-     </div>
-     <input aria-label="Tìm kiếm sản phẩm" class="search" id="search" placeholder="⌕  Tìm kiếm sản phẩm..."/>
-    </div>
-    <div class="products" id="productGrid">
-    </div>
-   </section>
-   <section class="banner" id="story">
-    <div>
-     <span class="eyebrow">
-      PHONG CÁCH BÁ KHÍ
-     </span>
-     <h2>
-      Less noise.
-      <br/>
-      More you.
-     </h2>
-     <p>
-      Phong cách đẹp nhất là phong cách khiến bạn cảm thấy tự tin. Nhóm 2 - Bá Khí theo đuổi thiết kế tối giản, bền dáng và dễ phối.
-     </p>
-     <a class="primary" href="#products">
-      MUA SẮM NGAY ↗
-     </a>
-    </div>
-    <div class="banner-image">
-    </div>
-   </section>
-   <footer class="footer">
-    <div class="footer-inner">
-     <div>
-      <div class="brand">
-       Nhóm 2 - Bá Khí
-       <span>
-        .
-       </span>
+    <header class="header">
+      <nav class="nav">
+        <a class="brand" href="/">
+          Nhóm 2 - Bá Khí
+          <span>
+            .
+          </span>
+        </a>
+        <div class="navlinks">
+          <a href="#products">
+            SẢN PHẨM
+          </a>
+          <a href="#products" onclick="chooseCategory('Áo')">
+            ÁO
+          </a>
+          <a href="#products" onclick="chooseCategory('Quần')">
+            QUẦN
+          </a>
+          <a href="#story">
+            VỀ CHÚNG TÔI
+          </a>
+        </div>
+        <div class="navright">
+          <button aria-label="Tài khoản" class="iconbtn" onclick="openMember()" title="Tài khoản">
+            ♙
+          </button>
+          <button aria-label="Yêu thích" class="iconbtn" onclick="openFavorites()" title="Yêu thích">
+            ♡
+          </button>
+          <button aria-label="Tra cứu đơn" class="iconbtn" onclick="openTracking()" title="Tra cứu đơn">
+            ▤
+          </button>
+          <button aria-label="Tìm kiếm" class="iconbtn"
+            onclick="document.getElementById('search').focus();document.getElementById('products').scrollIntoView()">
+            ⌕
+          </button>
+          <button aria-label="Giỏ hàng" class="iconbtn" onclick="openCart()">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2
+           1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+            </svg>
+            <span class="count" id="cartCount">
+              0
+            </span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">
+          THE NEW COLLECTION · 2026
+        </span>
+        <h1>
+          Wear your
+          <br />
+          own story.
+        </h1>
+        <p>
+          Đơn giản nhưng không đơn điệu. Khám phá những thiết kế tinh tế, thoải mái để tự tin là chính mình mỗi ngày.
+        </p>
+        <a class="primary" href="#products">
+          KHÁM PHÁ BỘ SƯU TẬP
+          <span>
+            ↗
+          </span>
+        </a>
       </div>
-      <p>
-       Everyday, elevated. Những món đồ bạn muốn mặc hôm nay và cả ngày mai.
-      </p>
-     </div>
-     <div>
-      <b>
-       KHÁM PHÁ
-      </b>
-      <p>
-       <a href="#products">
-        Sản phẩm
-       </a>
-       <br/>
-       <a href="#story">
-        Về chúng tôi
-       </a>
-      </p>
-     </div>
-     <div>
-      <b>
-       HỖ TRỢ
-      </b>
-      <p>
-       Thanh toán COD
-       <br/>
-       Chính sách giao hàng
-       <br/>
-       Liên hệ: dunhocit@gmail.com
-      </p>
-     </div>
+      <div aria-label="Thời trang mùa mới" class="hero-photo" role="img">
+      </div>
+    </section>
+    <div class="wrap">
+      <div class="perks">
+        <div>
+          ◇   CHẤT LƯỢNG CHỌN LỌC
+          <small>
+            Chú trọng chất liệu và đường may
+          </small>
+        </div>
+        <div>
+          ↗   GIAO HÀNG TOÀN QUỐC
+          <small>
+            Đóng gói cẩn thận, giao nhanh
+          </small>
+        </div>
+        <div>
+          ♡   HỖ TRỢ TẬN TÂM
+          <small>
+            Tư vấn lựa chọn sản phẩm
+          </small>
+        </div>
+      </div>
     </div>
-    <div class="footer-inner" style="padding-top:35px">
-     <small>
-      © 2026 Nhóm 2 - Bá Khí. Demo storefront.
-     </small>
-     <small>
-      <a href="?admin=1">
-       Quản trị cửa hàng
-      </a>
-     </small>
-    </div>
-   </footer>
+    <section class="section wrap" id="products">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">
+            CURATED FOR YOU
+          </span>
+          <h2>
+            Sản phẩm nổi bật
+          </h2>
+          <p>
+            Chọn phong cách của riêng bạn.
+          </p>
+        </div>
+        <span class="dim" id="productCount">
+        </span>
+      </div>
+      <div class="filters">
+        <div class="categories" id="categories">
+        </div>
+        <input aria-label="Tìm kiếm sản phẩm" class="search" id="search" placeholder="⌕  Tìm kiếm sản phẩm..." />
+      </div>
+      <div class="products" id="productGrid">
+      </div>
+    </section>
+    <section class="banner" id="story">
+      <div>
+        <span class="eyebrow">
+          PHONG CÁCH BÁ KHÍ
+        </span>
+        <h2>
+          Less noise.
+          <br />
+          More you.
+        </h2>
+        <p>
+          Phong cách đẹp nhất là phong cách khiến bạn cảm thấy tự tin. Nhóm 2 - Bá Khí theo đuổi thiết kế tối giản, bền
+          dáng và dễ phối.
+        </p>
+        <a class="primary" href="#products">
+          MUA SẮM NGAY ↗
+        </a>
+      </div>
+      <div class="banner-image">
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <div class="brand">
+            Nhóm 2 - Bá Khí
+            <span>
+              .
+            </span>
+          </div>
+          <p>
+            Everyday, elevated. Những món đồ bạn muốn mặc hôm nay và cả ngày mai.
+          </p>
+        </div>
+        <div>
+          <b>
+            KHÁM PHÁ
+          </b>
+          <p>
+            <a href="#products">
+              Sản phẩm
+            </a>
+            <br />
+            <a href="#story">
+              Về chúng tôi
+            </a>
+          </p>
+        </div>
+        <div>
+          <b>
+            HỖ TRỢ
+          </b>
+          <p>
+            Thanh toán COD
+            <br />
+            Chính sách giao hàng
+            <br />
+            Liên hệ: dunhocit@gmail.com
+          </p>
+        </div>
+      </div>
+      <div class="footer-inner" style="padding-top:35px">
+        <small>
+          © 2026 Nhóm 2 - Bá Khí. Demo storefront.
+        </small>
+        <small>
+          <a href="?admin=1">
+            Quản trị cửa hàng
+          </a>
+        </small>
+      </div>
+    </footer>
+    <button aria-label="Mở tư vấn" class="chat-launcher" id="chatLauncher" title="Tư vấn Bá Khí">✦</button>
+    <section aria-label="Tư vấn Bá Khí" aria-live="polite" class="chat-panel" id="chatPanel">
+      <div class="chat-head">
+        <div><b>Tư vấn Bá Khí</b><small>Hỗ trợ chọn sản phẩm và chính sách</small></div>
+        <button aria-label="Đóng tư vấn" class="close" id="chatClose" style="color:white">×</button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-message">Xin chào! Bạn muốn tìm hiểu sản phẩm hay chính sách của cửa hàng?</div>
+      </div>
+      <form class="chat-form" id="chatForm">
+        <input aria-label="Câu hỏi" autocomplete="off" id="chatQuestion" maxlength="600" placeholder="Nhập câu hỏi..." required />
+        <button aria-label="Gửi câu hỏi" title="Gửi">➤</button>
+      </form>
+    </section>
   </div>
   <div class="hidden admin" id="admin">
-   <a href="/">
-    ← Trở về cửa hàng
-   </a>
-   <h1>
-    Nhóm 2 - Bá Khí / Quản trị
-   </h1>
-   <p class="dim">
-    Nhập mã quản trị (ADMIN_TOKEN) để thao tác. Không chia sẻ mã này cho người khác.
-   </p>
-   <div style="display:flex;gap:8px;max-width:550px;margin-bottom:24px">
-    <input class="search" id="adminToken" placeholder="ADMIN_TOKEN" style="flex:1" type="password"/>
-    <button class="primary" onclick="loadAdmin()">
-     Đăng nhập
-    </button>
-   </div>
-   <div class="hidden" id="adminArea">
-    <div class="admin-layout">
-     <div class="panel">
-      <h2 id="formHeading">
-       Thêm sản phẩm
-      </h2>
-      <form class="form" id="productForm">
-       <input id="editId" type="hidden"/>
-       <label>
-        Tên sản phẩm
-        <input id="pName" required=""/>
-       </label>
-       <label>
-        Slug (không dấu, dấu gạch nối)
-        <input id="pSlug" pattern="[a-z0-9-]+" required=""/>
-       </label>
-       <label>
-        Danh mục
-        <input id="pCategory" required="" value="Áo"/>
-       </label>
-       <label>
-        Mô tả
-        <textarea id="pDescription"></textarea>
-       </label>
-       <label>
-        Giá (VND)
-        <input id="pPrice" min="0" required="" type="number"/>
-       </label>
-       <label>
-        Giá gốc (tuỳ chọn)
-        <input id="pCompare" min="0" type="number"/>
-       </label>
-       <label>
-        Tồn kho
-        <input id="pStock" min="0" required="" type="number"/>
-       </label>
-       <label>
-        Size (cách nhau bởi dấu phẩy)
-        <input id="pSizes" required="" value="S,M,L,XL"/>
-       </label>
-       <label>
-        Màu (cách nhau bởi dấu phẩy)
-        <input id="pColors" required="" value="Đen,Trắng"/>
-       </label>
-       <label>
-        Ảnh sản phẩm (JPG/PNG/WebP, tối đa 5MB)
-        <input accept="image/jpeg,image/png,image/webp" id="pImage" type="file"/>
-       </label>
-       <label>
-        <input id="pFeatured" style="width:auto" type="checkbox"/>
-        Nổi bật
-       </label>
-       <button class="primary" type="submit">
-        LƯU SẢN PHẨM
-       </button>
-       <button class="outline" onclick="resetProductForm()" type="button">
-        Làm mới form
-       </button>
-      </form>
-     </div>
-     <div>
-      <div class="panel">
-       <h2>
-        Danh sách sản phẩm
-       </h2>
-       <div style="overflow:auto">
-        <table class="admintable">
-         <thead>
-          <tr>
-           <th>
-            Sản phẩm
-           </th>
-           <th>
-            Giá
-           </th>
-           <th>
-            Kho
-           </th>
-           <th>
-           </th>
-          </tr>
-         </thead>
-         <tbody id="adminProducts">
-         </tbody>
-        </table>
-       </div>
-      </div>
-      <div class="panel" id="extraAdmin" style="margin-top:22px">
-       <h2>
-        Quản trị nâng cao
-       </h2>
-       <div class="dim" id="adminOverview">
-        Thống kê, voucher và khách hàng
-       </div>
-       <div id="adminExtras">
-       </div>
-      </div>
-      <div class="panel" style="margin-top:22px">
-       <h2>
-        Đơn hàng mới nhất
-       </h2>
-       <div style="overflow:auto">
-        <table class="admintable">
-         <thead>
-          <tr>
-           <th>
-            Mã / Khách
-           </th>
-           <th>
-            Tổng
-           </th>
-           <th>
-            Trạng thái
-           </th>
-          </tr>
-         </thead>
-         <tbody id="adminOrders">
-         </tbody>
-        </table>
-       </div>
-      </div>
-     </div>
+    <a href="/">
+      ← Trở về cửa hàng
+    </a>
+    <h1>
+      Nhóm 2 - Bá Khí / Quản trị
+    </h1>
+    <p class="dim">
+      Nhập mã quản trị (ADMIN_TOKEN) để thao tác. Không chia sẻ mã này cho người khác.
+    </p>
+    <div style="display:flex;gap:8px;max-width:550px;margin-bottom:24px">
+      <input class="search" id="adminToken" placeholder="ADMIN_TOKEN" style="flex:1" type="password" />
+      <button class="primary" onclick="loadAdmin()">
+        Đăng nhập
+      </button>
     </div>
-   </div>
+    <div class="hidden" id="adminArea">
+      <section class="panel" style="margin-bottom:24px">
+        <h2>Kho tri thức chatbot</h2>
+        <p class="dim">Thêm nội dung chính sách, hướng dẫn mua hàng hoặc thông tin thương hiệu để chatbot tra cứu.</p>
+        <form class="form" id="knowledgeForm" style="max-width:760px">
+          <label>Tiêu đề tài liệu<input id="knowledgeTitle" maxlength="120" required /></label>
+          <label>Nội dung<textarea id="knowledgeContent" maxlength="20000" minlength="20" required style="min-height:180px"></textarea></label>
+          <button class="primary" type="submit">LƯU VÀ VECTOR HÓA</button>
+        </form>
+        <div class="knowledge-list" id="knowledgeList"></div>
+      </section>
+      <div class="admin-layout">
+        <div class="panel">
+          <h2 id="formHeading">
+            Thêm sản phẩm
+          </h2>
+          <form class="form" id="productForm">
+            <input id="editId" type="hidden" />
+            <label>
+              Tên sản phẩm
+              <input id="pName" required="" />
+            </label>
+            <label>
+              Slug (không dấu, dấu gạch nối)
+              <input id="pSlug" pattern="[a-z0-9-]+" required="" />
+            </label>
+            <label>
+              Danh mục
+              <input id="pCategory" required="" value="Áo" />
+            </label>
+            <label>
+              Mô tả
+              <textarea id="pDescription"></textarea>
+            </label>
+            <label>
+              Giá (VND)
+              <input id="pPrice" min="0" required="" type="number" />
+            </label>
+            <label>
+              Giá gốc (tuỳ chọn)
+              <input id="pCompare" min="0" type="number" />
+            </label>
+            <label>
+              Tồn kho
+              <input id="pStock" min="0" required="" type="number" />
+            </label>
+            <label>
+              Size (cách nhau bởi dấu phẩy)
+              <input id="pSizes" required="" value="S,M,L,XL" />
+            </label>
+            <label>
+              Màu (cách nhau bởi dấu phẩy)
+              <input id="pColors" required="" value="Đen,Trắng" />
+            </label>
+            <label>
+              Ảnh sản phẩm (JPG/PNG/WebP, tối đa 5MB)
+              <input accept="image/jpeg,image/png,image/webp" id="pImage" type="file" />
+            </label>
+            <label>
+              <input id="pFeatured" style="width:auto" type="checkbox" />
+              Nổi bật
+            </label>
+            <button class="primary" type="submit">
+              LƯU SẢN PHẨM
+            </button>
+            <button class="outline" onclick="resetProductForm()" type="button">
+              Làm mới form
+            </button>
+          </form>
+        </div>
+        <div>
+          <div class="panel">
+            <h2>
+              Danh sách sản phẩm
+            </h2>
+            <div style="overflow:auto">
+              <table class="admintable">
+                <thead>
+                  <tr>
+                    <th>
+                      Sản phẩm
+                    </th>
+                    <th>
+                      Giá
+                    </th>
+                    <th>
+                      Kho
+                    </th>
+                    <th>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="adminProducts">
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel" id="extraAdmin" style="margin-top:22px">
+            <h2>
+              Quản trị nâng cao
+            </h2>
+            <div class="dim" id="adminOverview">
+              Thống kê, voucher và khách hàng
+            </div>
+            <div id="adminExtras">
+            </div>
+          </div>
+          <div class="panel" style="margin-top:22px">
+            <h2>
+              Đơn hàng mới nhất
+            </h2>
+            <div style="overflow:auto">
+              <table class="admintable">
+                <thead>
+                  <tr>
+                    <th>
+                      Mã / Khách
+                    </th>
+                    <th>
+                      Tổng
+                    </th>
+                    <th>
+                      Trạng thái
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="adminOrders">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="overlay" id="overlay" onclick="closeAll()">
   </div>
   <aside aria-label="Giỏ hàng" class="drawer" id="drawer">
-   <div class="drawer-head">
-    <b style="font-size:20px">
-     Giỏ hàng của bạn
-    </b>
-    <button aria-label="Đóng" class="close" onclick="closeAll()">
-     ×
-    </button>
-   </div>
-   <div class="drawer-body">
-    <div id="cartItems">
+    <div class="drawer-head">
+      <b style="font-size:20px">
+        Giỏ hàng của bạn
+      </b>
+      <button aria-label="Đóng" class="close" onclick="closeAll()">
+        ×
+      </button>
     </div>
-    <form class="form hidden" id="checkoutForm">
-     <h3>
-      Thông tin nhận hàng
-     </h3>
-     <label>
-      Họ và tên
-      <input minlength="2" name="customer_name" placeholder="Nguyễn Văn A" required=""/>
-     </label>
-     <label>
-      Số điện thoại
-      <input name="phone" pattern="[0-9+() .-]{9,20}" placeholder="09xxxxxxxx" required=""/>
-     </label>
-     <label>
-      Địa chỉ giao hàng
-      <input minlength="10" name="address" placeholder="Số nhà, đường, phường, tỉnh/thành" required=""/>
-     </label>
-     <label>
-      Ghi chú
-      <textarea name="note" placeholder="Lời nhắn cho cửa hàng"></textarea>
-     </label>
-     <label>
-      Mã ưu đãi (tùy chọn)
-      <input maxlength="30" name="voucher_code" placeholder="Ví dụ: BAKHI10"/>
-     </label>
-     <div class="dim">
-      Phương thức thanh toán: khi nhận hàng (COD). Phí vận chuyển sẽ được xác nhận khi liên hệ.
-     </div>
-     <button class="primary" style="width:100%" type="submit">
-      XÁC NHẬN ĐẶT HÀNG
-     </button>
-    </form>
-   </div>
-   <div class="drawer-bottom" id="cartBottom">
-    <div class="total">
-     <span>
-      Tạm tính
-     </span>
-     <span id="subtotal">
-      0₫
-     </span>
+    <div class="drawer-body">
+      <div id="cartItems">
+      </div>
+      <form class="form hidden" id="checkoutForm">
+        <h3>
+          Thông tin nhận hàng
+        </h3>
+        <label>
+          Họ và tên
+          <input minlength="2" name="customer_name" placeholder="Nguyễn Văn A" required="" />
+        </label>
+        <label>
+          Số điện thoại
+          <input name="phone" pattern="[0-9+() .-]{9,20}" placeholder="09xxxxxxxx" required="" />
+        </label>
+        <label>
+          Địa chỉ giao hàng
+          <input minlength="10" name="address" placeholder="Số nhà, đường, phường, tỉnh/thành" required="" />
+        </label>
+        <label>
+          Ghi chú
+          <textarea name="note" placeholder="Lời nhắn cho cửa hàng"></textarea>
+        </label>
+        <label>
+          Mã ưu đãi (tùy chọn)
+          <input maxlength="30" name="voucher_code" placeholder="Ví dụ: BAKHI10" />
+        </label>
+        <div class="dim">
+          Phương thức thanh toán: khi nhận hàng (COD). Phí vận chuyển sẽ được xác nhận khi liên hệ.
+        </div>
+        <button class="primary" style="width:100%" type="submit">
+          XÁC NHẬN ĐẶT HÀNG
+        </button>
+      </form>
     </div>
-    <button class="primary" onclick="showCheckout()" style="width:100%">
-     TIẾN HÀNH ĐẶT HÀNG →
-    </button>
-    <p class="dim" style="text-align:center">
-     Thanh toán an toàn khi nhận hàng
-    </p>
-   </div>
+    <div class="drawer-bottom" id="cartBottom">
+      <div class="total">
+        <span>
+          Tạm tính
+        </span>
+        <span id="subtotal">
+          0₫
+        </span>
+      </div>
+      <button class="primary" onclick="showCheckout()" style="width:100%">
+        TIẾN HÀNH ĐẶT HÀNG →
+      </button>
+      <p class="dim" style="text-align:center">
+        Thanh toán an toàn khi nhận hàng
+      </p>
+    </div>
   </aside>
   <div class="modal" id="commerceModal">
-   <div class="modalbox" style="padding:28px;max-width:580px">
-    <button class="close" onclick="closeCommerce()" style="float:right">
-     ×
-    </button>
-    <div id="commerceContent">
+    <div class="modalbox" style="padding:28px;max-width:580px">
+      <button class="close" onclick="closeCommerce()" style="float:right">
+        ×
+      </button>
+      <div id="commerceContent">
+      </div>
     </div>
-   </div>
   </div>
   <div class="modal" id="modal">
-   <div class="modalbox" id="modalContent">
-   </div>
+    <div class="modalbox" id="modalContent">
+    </div>
   </div>
   <div class="toast" id="toast" role="status">
   </div>
@@ -1276,5 +1479,6 @@
   </script>
   <script defer="" src="/commerce.js">
   </script>
- </body>
+</body>
+
 </html>

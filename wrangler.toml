@@ -2,6 +2,10 @@ name = "nhom2-ba-khi-fashion"
 main = "backend/src/index.ts"
 compatibility_date = "2025-01-15"
 
+[ai]
+binding = "AI"
+remote = true
+
 [assets]
 directory = "./frontend"
 binding = "ASSETS"
@@ -20,3 +24,8 @@ id = "a551e0d5df11345caa3b9e93381e8f1f6"
 [[r2_buckets]]
 binding = "IMAGES"
 bucket_name = "nhom2-ba-khi-images"
+
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "ba-khi-knowledge"
+remote = true

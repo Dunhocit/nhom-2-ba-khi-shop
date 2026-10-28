@@ -349,6 +349,7 @@ async function loadAdmin() {
     $('#adminArea').classList.remove('hidden');
     renderAdminProducts();
     renderAdminOrders(data.orders);
+    await loadKnowledge();
     toast('Đã xác thực quản trị');
   } catch (e) {
     toast(e.message);
@@ -509,3 +510,94 @@ async function deleteProduct(id) {
     toast(e.message);
   }
 }
+
+function appendChatMessage(text, role, sources = []) {
+  const message = document.createElement('div');
+  message.className = `chat-message ${role}`;
+  message.textContent = text;
+  if (sources.length) {
+    const source = document.createElement('small');
+    source.textContent = `Nguồn: ${sources.join(', ')}`;
+    message.append(source);
+  }
+  $('#chatMessages').append(message);
+  $('#chatMessages').scrollTop = $('#chatMessages').scrollHeight;
+}
+
+$('#chatLauncher').addEventListener('click', () => $('#chatPanel').classList.toggle('open'));
+$('#chatClose').addEventListener('click', () => $('#chatPanel').classList.remove('open'));
+$('#chatForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const question = $('#chatQuestion').value.trim();
+  if (!question) return;
+  const submit = $('#chatForm button');
+  $('#chatQuestion').value = '';
+  appendChatMessage(question, 'user');
+  submit.disabled = true;
+  submit.textContent = '…';
+  try {
+    const result = await api('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question }),
+    });
+    appendChatMessage(result.answer, 'assistant', result.sources || []);
+  } catch (error) {
+    appendChatMessage(error.message || 'Không thể kết nối chatbot lúc này.', 'assistant');
+  } finally {
+    submit.disabled = false;
+    submit.textContent = '➤';
+  }
+});
+
+async function loadKnowledge() {
+  const data = await api('/api/admin/knowledge', { headers: adminHeaders() });
+  $('#knowledgeList').innerHTML = data.documents.length
+    ? data.documents
+        .map(
+          (document) => `<div class="knowledge-row">
+            <div><strong>${escapeHtml(document.title)}</strong><span class="dim">${document.chunks} đoạn</span></div>
+            <button class="smallbtn" data-knowledge-delete="${escapeHtml(document.id)}" aria-label="Xóa ${escapeHtml(document.title)}">Xóa</button>
+          </div>`,
+        )
+        .join('')
+    : '<p class="dim">Chưa có tài liệu tri thức.</p>';
+  $('#knowledgeList').querySelectorAll('[data-knowledge-delete]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      if (!confirm('Xóa tài liệu và các vector liên quan?')) return;
+      try {
+        await api('/api/admin/knowledge/' + encodeURIComponent(button.dataset.knowledgeDelete), {
+          method: 'DELETE',
+          headers: adminHeaders(),
+        });
+        await loadKnowledge();
+        toast('Đã xóa tài liệu tri thức');
+      } catch (error) {
+        toast(error.message);
+      }
+    });
+  });
+}
+
+$('#knowledgeForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const button = $('#knowledgeForm button[type=submit]');
+  button.disabled = true;
+  try {
+    const result = await api('/api/admin/knowledge', {
+      method: 'POST',
+      headers: adminHeaders(),
+      body: JSON.stringify({
+        title: $('#knowledgeTitle').value.trim(),
+        content: $('#knowledgeContent').value.trim(),
+      }),
+    });
+    $('#knowledgeForm').reset();
+    await loadKnowledge();
+    toast(`Đã lưu tài liệu thành ${result.chunks} đoạn`);
+  } catch (error) {
+    toast(error.message);
+  } finally {
+    button.disabled = false;
+  }
+});

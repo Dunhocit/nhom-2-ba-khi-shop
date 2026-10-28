@@ -1,15 +1,10 @@
-import { commerce } from './commerce';
+import { commerce, type ShopBindings } from './commerce';
+import { chatbot } from './chatbot';
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { z } from 'zod';
 
-type Bindings = {
-  DB: D1Database;
-  CACHE: KVNamespace;
-  IMAGES: R2Bucket;
-  ASSETS: Fetcher;
-  ADMIN_TOKEN: string;
-};
+type Bindings = ShopBindings;
 type Product = {
   id: number;
   name: string;
@@ -360,6 +355,7 @@ app.patch('/api/admin/orders/:id', async (c) => {
   return c.json({ ok: Boolean(r.meta.changes) });
 });
 app.route('/api', commerce);
+app.route('/api', chatbot);
 app.onError((e, c) => {
   console.error(e);
   return c.json({ error: 'Lỗi máy chủ' }, 500);

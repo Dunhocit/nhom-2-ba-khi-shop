@@ -3,9 +3,9 @@
 Bộ source gồm giao diện cửa hàng responsive, UX mua hàng (lọc/tìm kiếm/xem chi tiết/size/màu/giỏ hàng/checkout COD), trang quản trị sản phẩm, hình ảnh và đơn hàng, Hono API và Cloudflare D1 + KV + R2.
 
 ## Công nghệ
-- FE: HTML/CSS/JavaScript, không yêu cầu build (nằm ở `public/`)
-- BE: Hono + TypeScript trên Cloudflare Workers (`src/index.ts`)
-- D1: danh mục sản phẩm, tồn kho, đơn hàng và chi tiết đơn (`migrations/0001_init.sql`)
+- FE: HTML/CSS/JavaScript, không yêu cầu build (nằm ở `frontend/`)
+- BE: Hono + TypeScript trên Cloudflare Workers (`backend/src/index.ts`)
+- D1: danh mục sản phẩm, tồn kho, đơn hàng và chi tiết đơn (`backend/migrations/0001_init.sql`)
 - KV: cache danh sách sản phẩm (60 giây); giỏ hàng demo nằm ở localStorage trình duyệt
 - R2: ảnh sản phẩm qua `/api/admin/images` và `/api/images/...`
 
@@ -64,11 +64,17 @@ Mở địa chỉ do Wrangler in ra (thường `http://localhost:8787`). Trang q
 ## Cấu trúc
 ```text
 nhom2-ba-khi-shop/
-├── public/
-│   ├── index.html     # cửa hàng, responsive + dashboard admin
-│   └── app.js         # hành vi frontend
-├── src/index.ts       # Hono API
-├── migrations/0001_init.sql
+├── backend/
+│   ├── src/
+│   │   ├── index.ts          # Hono API core
+│   │   └── commerce.ts       # Module thương mại nâng cao
+│   └── migrations/
+│       ├── 0001_init.sql
+│       └── 0002_commerce.sql
+├── frontend/
+│   ├── index.html            # Cửa hàng, responsive + dashboard admin
+│   ├── app.js                # Hành vi frontend & giỏ hàng
+│   └── commerce.js           # Tài khoản, review, voucher
 ├── wrangler.toml
 ├── package.json
 └── .dev.vars.example

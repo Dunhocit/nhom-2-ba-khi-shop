@@ -1,9 +1,9 @@
 name = "nhom2-ba-khi-fashion"
-main = "src/index.ts"
+main = "backend/src/index.ts"
 compatibility_date = "2025-01-15"
 
 [assets]
-directory = "./public"
+directory = "./frontend"
 binding = "ASSETS"
 run_worker_first = ["/api/*"]
 
@@ -11,11 +11,11 @@ run_worker_first = ["/api/*"]
 binding = "DB"
 database_name = "fashion_db"
 database_id = "115a1bc7-4a78-4a6a-8c95-9f082413ca00"
-migrations_dir = "migrations"
+migrations_dir = "backend/migrations"
 
 [[kv_namespaces]]
 binding = "CACHE"
-id = "ad5b878b28a9476fb69643ce59da7ead"
+id = "a551e0d5df11345caa3b9e93381e8f1f6"
 
 [[r2_buckets]]
 binding = "IMAGES"
